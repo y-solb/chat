@@ -2,8 +2,11 @@
   box-sizing: border-box;
 }
 body {
+  position: relative;
   width: 100%;
+  height: 100vh;
   max-width: 500px;
+  min-width: 360px;
   margin: 0 auto;
   font-family: "Noto Sans KR", sans-serif;
 }
@@ -22,7 +25,6 @@ input {
 input[type="radio"] {
   display: none;
 }
-
 input[type="radio"] + label {
   flex: 1 1 auto;
   text-align: center;
@@ -34,11 +36,9 @@ input[type="radio"] + label {
   padding: 8px;
   border: 1px solid #999;
 }
-
 input[type="radio"]:checked + label {
   border: 2px solid #8b7ec8;
 }
-
 .marker__wrapper {
   width: 100%;
   display: inline-block;
@@ -46,24 +46,20 @@ input[type="radio"]:checked + label {
   box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
   border-radius: 0px 0px 16px 16px;
 }
-
 .marker__form {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-
 .marker__form > div {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-
 .marker__type {
   display: flex;
   gap: 12px;
 }
-
 .maker__search {
   width: 100%;
   height: 42px;
@@ -71,7 +67,6 @@ input[type="radio"]:checked + label {
   border: 1px solid #999;
   padding: 8px;
 }
-
 .maker__search:focu {
   width: 100%;
   height: 42px;
@@ -79,7 +74,6 @@ input[type="radio"]:checked + label {
   border: 1px solid #999;
   padding: 8px;
 }
-
 .submit__btn {
   width: 100%;
   height: 42px;
@@ -98,6 +92,18 @@ input[type="radio"]:checked + label {
 }
 .submit__btn.loading > span {
   display: none;
+}
+.nickname__result > p {
+  margin: 32px 0px;
+  background-color: #f0f0f0;
+  border-radius: 16px;
+  padding: 16px;
+}
+.kakao__ad {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
 }
 .loader {
   display: none;
@@ -121,10 +127,4 @@ input[type="radio"]:checked + label {
   80% {
     background-position: 0% 50%, 50% 50%, 100% 100%;
   }
-}
-.nickname__result > p {
-  margin: 32px 0px;
-  background-color: #f0f0f0;
-  border-radius: 16px;
-  padding: 16px;
 }
