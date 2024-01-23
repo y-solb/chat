@@ -12,11 +12,11 @@ const openai = new OpenAI({
 });
 
 const corsOptions = {
-  origin: "https://nickname-maker.pages.dev/",
+  origin: "https://nickname-maker.pages.dev",
   credentials: true,
 };
 
-app.use(cors());
+app.use(cors(corsOptions));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -52,7 +52,7 @@ app.post("/recommend-nickname", async (req, res) => {
   res.json({ result });
 });
 
-function convertType(type: "other" | "kor" | "eng" | "engNum") {
+function convertType(type) {
   switch (type) {
     case "other":
       return "전체";
@@ -66,5 +66,5 @@ function convertType(type: "other" | "kor" | "eng" | "engNum") {
       return type;
   }
 }
-
-module.exports.handler = serverless(app);
+// app.listen(3000);
+export const handler = serverless(app);
