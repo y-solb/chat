@@ -2,6 +2,7 @@ import dotenv from "dotenv";
 import OpenAI from "openai";
 import express from "express";
 import cors from "cors";
+import serverless from "serverless-http";
 
 dotenv.config();
 
@@ -10,10 +11,11 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-// const corsOptions = {
-//   origin: "https://www.domain.com",
-//   credentials: true,
-// };
+const corsOptions = {
+  origin: "https://nickname-maker.pages.dev/",
+  credentials: true,
+};
+
 app.use(cors());
 
 app.use(express.json());
@@ -65,4 +67,4 @@ function convertType(type: "other" | "kor" | "eng" | "engNum") {
   }
 }
 
-app.listen(3000);
+module.exports.handler = serverless(app);
