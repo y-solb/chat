@@ -122,7 +122,7 @@ input[type="radio"]:checked + label {
     background-position: 0% 50%, 50% 50%, 100% 100%;
   }
 }
-.nickname__result {
+.nickname__result > p {
   margin: 32px 0px;
   background-color: #f0f0f0;
   border-radius: 16px;
