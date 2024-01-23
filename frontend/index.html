@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./index.js" defer></script>
+    <title>닉네임 생성기</title>
+  </head>
+  <body>
+    <div class="marker__wrapper">
+      <h1>닉네임 생성기 ✏️</h1>
+      <form id="nicknameForm" class="marker__form">
+        <div>
+          <p>조합</p>
+          <div class="marker__type">
+            <input type="radio" name="type" value="other" id="other" checked />
+            <label for="other">전체</label>
+
+            <input type="radio" name="type" value="kor" id="kor" />
+            <label for="kor">한글</label>
+
+            <input type="radio" name="type" value="eng" id="eng" />
+            <label for="eng">영어</label>
+
+            <input type="radio" name="type" value="engNum" id="engNum" />
+            <label for="engNum">영어+숫자</label>
+          </div>
+        </div>
+        <div>
+          <label for="searchKeyword"
+            >포함되었으면 하는 키워드나 선호하는 스타일을 입력해주세요</label
+          >
+          <input
+            type="text"
+            id="searchKeyword"
+            class="maker__search"
+            name="searchKeyword"
+          />
+        </div>
+        <button id="submitBtn" class="submit__btn" type="button">
+          <span>생성</span>
+          <div class="loader"></div>
+        </button>
+      </form>
+    </div>
+    <div id="nicknameResult" class="nickname__result"></div>
+  </body>
+</html>
