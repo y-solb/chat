@@ -85,6 +85,9 @@ input[type="radio"]:checked + label {
   align-items: center;
   justify-content: center;
 }
+.submit__btn.loading {
+  pointer-events: none;
+}
 .submit__btn.loading .loader {
   display: block;
 }
