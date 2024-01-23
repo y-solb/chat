@@ -1,6 +1,6 @@
 document.getElementById("submitBtn").addEventListener("click", () => {
   const APIURL =
-    "https://o4rwyunpdauw6b6z7dadnth42e0gtlfo.lambda-url.ap-northeast-2.on.aws/recommend-nickname";
+    "https://cftombcyjhanhwpg2wtayvavyy0angoy.lambda-url.ap-northeast-2.on.aws/recommend-nickname";
 
   const form = document.getElementById("nicknameForm");
 
