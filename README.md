@@ -19,7 +19,7 @@
 ### 설치 및 시작
 
 ```
-npm i @solb/bottom-sheet
+npm i
 
 npm run dev
 ```
