@@ -12,7 +12,7 @@ const openai = new OpenAI({
 });
 
 const corsOptions = {
-  origin: "https://nickname-maker.pages.dev",
+  origin: process.env.ORIGIN,
   credentials: true,
 };
 
