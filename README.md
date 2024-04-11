@@ -27,7 +27,8 @@ npm run dev
 ### 환경변수 설정
 
 ```
-OPENAI_API_KEY=
+OPENAI_API_KEY= // OpenAI API를 사용하기 위한 인증 키
+ORIGIN= // 프론트엔드 URL
 ```
 
 ## Frontend
